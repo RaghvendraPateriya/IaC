@@ -1,0 +1,7 @@
+{
+  "description" : "myWebServer",
+  "access_key" : <assess key>,
+  "secret_key" : <secret keu>,
+  "source_ami" : <ami id>
+
+}
