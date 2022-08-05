@@ -26,4 +26,8 @@ URL: https://www.packer.io
 - setup.sh
 - variable.json
 
+# Build Command
+
+``` packer build -var-file="variable.json" packer.json ```
+
 Note: Enable port 8080 in AWS - inbound security groups rules to add the following rule (custom TCP at port 8080) and allow access to anywhere.
