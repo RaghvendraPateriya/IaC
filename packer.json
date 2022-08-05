@@ -1,0 +1,30 @@
+{
+  "builders": [
+    {
+      "type": "amazon-ebs",
+      "access_key": "{{user `access_key` }}",
+      "secret_key": "{{user `secret_key` }}",
+      "region" : "us-east-1",
+      "ami_name" : "myFirstAMI",
+      "source_ami" : "{{user `source_ami` }}",
+      "instance_type" : "t2.micro",
+      "ssh_username" : "ec2-user"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "setup.sh"
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "manifest",
+      "output": "{{user `description`}}.json"
+    }
+  ],
+  "sensitive-variables": [
+    "secret_key",
+    "access_key"
+  ]
+}
