@@ -22,6 +22,7 @@ docker run -v  "$(pwd)":/code -w /code hashicorp/terraform:latest apply -auto-ap
 **Using Shell Script**
 
 ```
+docker build --tag myterraformimage .
 docker run -v "$(pwd)":/code -w /code --entrypoint=/code/deploy.sh myterraformimage
 ```
 
