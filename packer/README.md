@@ -1,7 +1,7 @@
-# IaC
+# IaC - Packer
 Infrastructure as Code by Building a Custom Machine Image in AWS
 
-# Packer 
+# Resource
 
 URL: https://www.packer.io
 
