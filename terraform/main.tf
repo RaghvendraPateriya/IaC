@@ -13,8 +13,21 @@ provider "aws" {
     secret_key     = var.aws_secret_key
 }
 
+
+data "aws_ami" "example"  {
+    most_recent      = true
+    owners           = ["self"]
+
+    filter {
+      name   = "name"
+      values = ["myFirstAMI"]
+    }
+
+
+}
+
 resource "aws_instance" "app_server" {
-    ami           = "ami-090fa75af13c156b4"
+    ami           = data.aws_ami.example.id
     instance_type = "t2.micro"
 
     tags = {
