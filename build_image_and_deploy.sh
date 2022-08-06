@@ -14,7 +14,7 @@ docker run --rm -v "$(pwd)":/code -w /code/packer hashicorp/packer:light build -
 
 sleep 10
 
-
+cd terraform
 docker build --tag myterraformimage .
 docker run -v "$(pwd)":/code -w /code --entrypoint=/code/deploy.sh myterraformimage
 
