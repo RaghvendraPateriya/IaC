@@ -19,5 +19,9 @@ $ terraform destroy
 docker run -v  "$(pwd)":/code -w /code hashicorp/terraform:latest init
 docker run -v  "$(pwd)":/code -w /code hashicorp/terraform:latest apply -auto-approve
 ```
+**Using Shell Script**
 
+```
+docker run -v "$(pwd)":/code -w /code --entrypoint=/code/deploy.sh myterraformimage
+```
 
