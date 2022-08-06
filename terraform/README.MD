@@ -13,5 +13,11 @@ $ terraform init
 $ terraform apply
 $ terraform destroy
 ```
+**Using Docker**
+
+```
+docker run -v  "$(pwd)":/code -w /code hashicorp/terraform:latest init
+docker run -v  "$(pwd)":/code -w /code hashicorp/terraform:latest apply -auto-approve
+```
 
 
